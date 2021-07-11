@@ -26,4 +26,4 @@
   * 범용적이고 더 강력한 가지치기 방법은 각 층에서 가장 낮은 20%의 연결을 제거하는것 대신에 전체 모델에 대해 가장 낮은 20% 연결을 한 번에 제거하는 것임
 
 # Paper
-#### 1.[Learning bothWeights and Connections for Efficient Neural Networks](https://arxiv.org/abs/1506.02626)  
+#### 1.[Learning both Weights and Connections for Efficient Neural Networks](https://arxiv.org/abs/1506.02626)  
