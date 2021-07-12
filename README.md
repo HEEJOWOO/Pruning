@@ -35,7 +35,7 @@
  * 어떠한 임계값 보다 아래 또는 정리 기준과 일지하는 가중치에 0 값이 할당, Pruning을 통해 0으로 설정하여 Back Propagation에 참여하지 않도록 함
  * bias : 보통 Layer의 출력에 대한 기여도가 상대적으로 커 Pruning할 요소가 거의 없음
  * activation : ReLU같은경우 음의 활성화를 정확하게 0 으로 만들기 때문에 일반적으로 ReLU 계층 다음에 희소성이 유도됨
- * weight의 Sparsity는 weight는 매우 작을 수도 있지만 종종 정확하게 0이 아니기 때문에 bias와는 다르게 일반적으로 Pruning에 사용됨
+ * weight의 Sparsity는 weight가 매우 작을 수도 있지만 종종 정확하게 0이 아니기 때문에 bias와는 다르게 일반적으로 Pruning에 사용됨
 
 ## Sparsity 정의
  * 희소성(Sparsity)는 Tensor크기에 비해 Tensor에서 얼마나 많은 요소가 정확히 0인지를 측정하는 것
