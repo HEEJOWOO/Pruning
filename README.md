@@ -1,5 +1,6 @@
 # Pruning
 
+#### [Pytorch 공식홈페이지 이용](https://tutorials.pytorch.kr/)
 #### pruning.py
 
   * 모델의 정확도가 손상되지 않는 범위에서 메모리, 배터리, 하드웨어 소비량을 줄이고, 기기에 경량화된 모델을 배치하며 저전력 컴퓨터와 같은 곳에서 사용하기위해 모델에 포함된 파라미터 수를 줄여 압축하는 최적의 기법이 필요
@@ -27,3 +28,6 @@
 
 # Paper
 #### 1.[Learning both Weights and Connections for Efficient Neural Networks](https://arxiv.org/abs/1506.02626)  
+
+# Pruning 이해
+ * 
