@@ -30,4 +30,31 @@
 #### 1.[Learning both Weights and Connections for Efficient Neural Networks](https://arxiv.org/abs/1506.02626)  
 
 # Pruning 이해
- * 
+## Pruning
+ * weight 및 활성화의 희소성(Sparsity)를 유도하는 일반적인 방법론 : Pruning
+ * 어떠한 임계값 보다 아래 또는 정리 기준과 일지하는 가중치에 0 값이 할당, Pruning을 통해 0으로 설정하여 Back Propagation에 참여하지 않도록 함
+ * bias : 보통 Layer의 출력에 대한 기여도가 상대적으로 커 Pruning할 요소가 거의 없음
+ * activation : ReLU같은경우 음의 활성화를 정활히 0 으로 만들기 때문에 일반적으로 ReLU 계층 다음에 희소성이 유도됨
+ * weight의 Sparsity는 weight는 매우 작을 수도 있지만 종종 정확하게 0이 아니기 때문에 bias와는 다르게 일반적으로 Pruning에 사용됨
+
+## Sparsity 정의
+ * 희소성(Sparsity)는 Tensor크기에 비해 Tensor에서 얼마나 많은 요소가 정확히 0인지를 측정하는 것
+ * 요소의 대부분이 0이면 Sparsity한 것으로 간주됨 
+ * L0 norm을 통해 0의 요소의 수를 측정 할 수 있음 
+
+## Weight Pruning
+ * Weight Pruning 또는 Model Pruning은 가중치의 Sparsity 를 높이기 위한 방법, 즉 Tensor에서 값이 0인 요소의 양을 높이는 것
+ * Pruning을 진행할시 각 요소의 절대 값을 이용, 절대 값은 일부 임계 값과 비교되며 임계값 미만인 경우 요소는 0으로 설정됨-> 절대 값이 임계값 보다 낮으면 0으로 만든다라고 생각하면 될듯
+ * distiller.MagnitudeParameterPruner 클래스에 의해 구현 ->L1 Norm이 작은 가중치가 최종 결과에 거의 기여하지 않으므로 덜 중요하고 제거 할 수 있다 판단
+ * over parameterized되면 중복된 특징들이 많으니 중복된 부분중 일부는 가중치를 0으로 설정하여 제거 할 수 있음 
+ * 가능한 많은 0이 있는 가중치 집합을 탐색하는 것으로 생각할 수도 있음
+
+## Pruning의 어려움
+ * Pruning을 통해 Sparsity를 유도하는데 있어 어려운 부분은 각 층의 Tensor에 사용한 임계값 또는 Sparsity 수준을 결정하는 것
+ * Sensitivity analysis(민감도 분석)은 Pruning에 대한 민감도에 따라 Tensor의 순위를 매기는데 도움이 되는 방법
+
+## [Pruning Filters for Efficient ConvNets](https://arxiv.org/abs/1608.08710)
+
+![image](https://user-images.githubusercontent.com/61686244/125252561-7888ca80-e333-11eb-8751-ebd4ba7e5540.png)
+
+ * VGG-16 또는 ResNet과 같은 깊은 네트워크의 경우 동일한 단계(동일한 피처 맵 크기)의 층이 Pruning에 유사한 민감도를 갖는 것을 확인하였음
