@@ -26,9 +26,7 @@
   * 가지치기 기법이 적용된 것을 영구적으로 만들기 위해, 재 파라미터화 관점의 weight_orig와 weight_mask, forward_pre_hook 값을 제거
   * 범용적이고 더 강력한 가지치기 방법은 각 층에서 가장 낮은 20%의 연결을 제거하는것 대신에 전체 모델에 대해 가장 낮은 20% 연결을 한 번에 제거하는 것임
 
-# Paper
-#### 1.[Learning both Weights and Connections for Efficient Neural Networks](https://arxiv.org/abs/1506.02626)  
-#### 2.[Pruning Filters for Efficient ConvNets](https://arxiv.org/abs/1608.08710)
+
 
 # Pruning 이해
 ## Pruning
@@ -55,3 +53,6 @@
  * Sensitivity analysis(민감도 분석)은 Pruning에 대한 민감도에 따라 Tensor의 순위를 매기는데 도움이 되는 방법
 
 
+# Paper
+#### 1.[Learning both Weights and Connections for Efficient Neural Networks](https://arxiv.org/abs/1506.02626)  
+#### 2.[Pruning Filters for Efficient ConvNets](https://arxiv.org/abs/1608.08710)
