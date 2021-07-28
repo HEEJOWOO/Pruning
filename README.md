@@ -28,6 +28,7 @@
 
 # Paper
 #### 1.[Learning both Weights and Connections for Efficient Neural Networks](https://arxiv.org/abs/1506.02626)  
+#### 2.[Pruning Filters for Efficient ConvNets](https://arxiv.org/abs/1608.08710)
 
 # Pruning 이해
 ## Pruning
@@ -53,8 +54,4 @@
  * Pruning을 통해 Sparsity를 유도하는데 있어 어려운 부분은 각 층의 Tensor에 사용한 임계값 또는 Sparsity 수준을 결정하는 것
  * Sensitivity analysis(민감도 분석)은 Pruning에 대한 민감도에 따라 Tensor의 순위를 매기는데 도움이 되는 방법
 
-## [Pruning Filters for Efficient ConvNets](https://arxiv.org/abs/1608.08710)
 
-![image](https://user-images.githubusercontent.com/61686244/125252561-7888ca80-e333-11eb-8751-ebd4ba7e5540.png)
-
- * VGG-16 또는 ResNet과 같은 깊은 네트워크의 경우 동일한 단계(동일한 피처 맵 크기)의 층이 Pruning에 유사한 민감도를 갖는 것을 확인하였음
