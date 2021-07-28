@@ -41,7 +41,7 @@
 ## Sparsity 정의
  * 희소성(Sparsity)는 Tensor크기에 비해 Tensor에서 얼마나 많은 요소가 정확히 0인지를 측정하는 것
  * 요소의 대부분이 0이면 Sparsity한 것으로 간주됨 
- * L0 norm을 통해 0의 요소의 수를 측정 할 수 있음 
+ * L1 norm을 통해 0의 요소의 수를 측정 할 수 있음 
 
 ## Weight Pruning
  * Weight Pruning 또는 Model Pruning은 가중치의 Sparsity 를 높이기 위한 방법, 즉 Tensor에서 값이 0인 요소의 양을 높이는 것
