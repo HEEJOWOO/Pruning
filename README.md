@@ -56,4 +56,4 @@
 # Paper
 #### 1.[Learning both Weights and Connections for Efficient Neural Networks](https://arxiv.org/abs/1506.02626)  
 #### 2.[Pruning Filters for Efficient ConvNets](https://arxiv.org/abs/1608.08710)
-#### 3.[Deep Compressiong : Compressing Deep Neural Networks With Pruning, Trained Quantization And Huffman Coding](https://arxiv.org/abs/1510.00149)
+#### 3.[Deep Compression : Compressing Deep Neural Networks With Pruning, Trained Quantization And Huffman Coding](https://arxiv.org/abs/1510.00149)
